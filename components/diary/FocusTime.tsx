@@ -12,7 +12,7 @@ export default function FocusTimePage({ focusTime, setFocusTime }: Props) {
   return (
     <div>
       <h1 className="text-[#FAFAFA] font-bold text-[23px]">
-        오늘의 집중 시간은? ⏱️
+        오늘의 집중한 횟수는? ⏱️
       </h1>
       <Input
         type="number"
