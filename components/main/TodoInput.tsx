@@ -16,6 +16,7 @@ export default function TodoInputPage({ onCreate }: Props) {
     onCreate(trimmed);
     setText("");
   };
+
   return (
     <div className="w-full max-w-2xl px-6 mt-4 self-stretch">
       <div className="grid grid-cols-[1fr_auto] items-center gap-4">
