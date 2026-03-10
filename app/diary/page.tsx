@@ -6,6 +6,7 @@ import { useState } from "react";
 export default function Diary() {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [content, setContent] = useState("");
+  const [focusTime, setFocusTime] = useState("");
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-[#18181B]">
@@ -20,6 +21,8 @@ export default function Diary() {
         setCurrentDate={setCurrentDate}
         content={content}
         setContent={setContent}
+        focusTime={focusTime}
+        setFocusTime={setFocusTime}
       />
     </div>
   );

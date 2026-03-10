@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import DateNavigatorPage from "./DateNavigator";
 import { Dispatch, SetStateAction } from "react";
 import DiaryTextAreaPage from "./DiaryTextArea";
+import FocusTimePage from "./FocusTime";
 import { Button } from "../ui/button";
 import { toast } from "sonner";
 
@@ -12,6 +13,8 @@ type Props = {
   setCurrentDate: Dispatch<SetStateAction<Date>>;
   content: string;
   setContent: Dispatch<SetStateAction<string>>;
+  focusTime: string;
+  setFocusTime: Dispatch<SetStateAction<string>>;
 };
 
 export default function DiaryCardPage({
@@ -19,6 +22,8 @@ export default function DiaryCardPage({
   setCurrentDate,
   content,
   setContent,
+  focusTime,
+  setFocusTime,
 }: Props) {
   const onSave = () => {
     const key = `diary-${currentDate.getFullYear()}.${String(currentDate.getMonth() + 1).padStart(2, "0")}.${String(currentDate.getDate()).padStart(2, "0")}`;
@@ -33,6 +38,7 @@ export default function DiaryCardPage({
           setCurrentDate={setCurrentDate}
         />
         <DiaryTextAreaPage content={content} setContent={setContent} />
+        <FocusTimePage focusTime={focusTime} setFocusTime={setFocusTime} />
         <div className="flex justify-end mt-2">
           <Button onClick={onSave}>저장하기</Button>
         </div>
